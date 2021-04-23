@@ -4,7 +4,19 @@ using System.Text;
 
 namespace WinFormsApp1
 {
-    class Modul
+    abstract class Modul
     {
+        public string modulName;
+        public int expGained;
+
+        internal Modul(string modulName, int exp)
+        {
+            this.modulName = modulName;
+            expGained = exp;
+        }
+
+        void ModulExecute()
+        { 
+        }
     }
 }

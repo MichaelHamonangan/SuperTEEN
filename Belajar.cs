@@ -7,20 +7,24 @@ namespace WinFormsApp1
 {
     class Belajar : Modul
     {
-        private int task;
-        //i adalah banyaknya task
+        private int NOTask;
+        private string[] Task;
+        private int[] drTask;
 
         public Belajar(string modulName, int exp, int i) : base(modulName, exp)
         {
             ModulName = modulName;
             ExpGained = exp;
-            task = i;
+            NOTask = i;
+
+            Task = new string[NOTask];
+            drTask = new int[NOTask];
         }
 
         public override int ModulExecute()
         {
-            //melakukan check jumlah task pada database
-            for (int i = 0; i < task; i++)
+            //melakukan check task pada database dan memasukkannya ke array Task dan drTask
+            for (int i = 0; i < NOTask; i++)
             {
                 //Menampilkan task dengan placeholder melalui database + 2*i
                 //Durasi task pada placeholder task+1

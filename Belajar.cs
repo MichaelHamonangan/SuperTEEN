@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 
 namespace WinFormsApp1
@@ -26,8 +29,9 @@ namespace WinFormsApp1
             //melakukan check task pada database dan memasukkannya ke array Task dan drTask
             for (int i = 0; i < NOTask; i++)
             {
-                //Menampilkan task dengan placeholder melalui database + 2*i
-                //Durasi task pada placeholder task+1
+                //nanti akan dibuat form kecil berisi task-task yang akan dilakukan beserta timer
+                Console.Write("Lakukan :/n{0}/n/nSelama : {1} detik", Task[i], drTask[i].ToString());
+                Thread.Sleep(drTask[i]*1000);
             }
 
             return ExpGained;

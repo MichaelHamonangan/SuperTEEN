@@ -12,13 +12,16 @@ namespace WinFormsApp1
         {
             ModulName = modulName;
             ExpGained = exp;
+
+            //generate variabel Task dari database
         }
 
         public int MotivasiExecute()
         {
-            //Mengambil task dari database
-            //secara random menampilkan modul-modul motivasi
-
+            var rand = new Random();
+            int angkaRandom = rand.Next(101));
+            
+            //membandingkan angka random dengan id pada database, lalu mengambil task namenya dan menampilkannya
             return ExpGained;
         }
     }

@@ -19,7 +19,7 @@ namespace WinFormsApp1
         {
             currentExp += Exp;
 
-            //konvert ke level apabila exp sudah di limit, sementara limit 1000 pada semua level
+            //konvert ke level apabila exp sudah di limit, sementara akan di limit 1000 pada semua level
             if (currentExp>1000)
             {
                 currentLevel += (currentExp/1000);

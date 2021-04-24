@@ -22,7 +22,7 @@ namespace WinFormsApp1
         public virtual int ModulExecute()
         {
             MessageBox.Show("Task yang harus dilakukan akan tertampil");
-            //menampilkan task
+
             return expGained;
         }
     }

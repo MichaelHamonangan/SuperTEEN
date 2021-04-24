@@ -1,5 +1,5 @@
 # SuperTEEN
-Praktikum PBO
+Praktikum PBO / GYR
 
 Anggota : 
 1. Michael Hamonangan Sitorus 20/460552/TK/51141 

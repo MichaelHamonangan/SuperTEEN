@@ -32,8 +32,8 @@ namespace WinFormsApp1
             this.Username = new System.Windows.Forms.Label();
             this.Password = new System.Windows.Forms.Label();
             this.SuperTEEN = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.Signin = new System.Windows.Forms.Button();
             this.Signup = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,19 +69,20 @@ namespace WinFormsApp1
             this.SuperTEEN.TabIndex = 2;
             this.SuperTEEN.Text = "SuperTEEN";
             // 
-            // textBox1
+            // tbUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(255, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 30);
-            this.textBox1.TabIndex = 3;
+            this.tbUsername.Location = new System.Drawing.Point(255, 113);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(204, 30);
+            this.tbUsername.TabIndex = 3;
             // 
-            // textBox2
+            // tbPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(255, 163);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 30);
-            this.textBox2.TabIndex = 4;
+            this.tbPassword.Location = new System.Drawing.Point(255, 163);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
+            this.tbPassword.Size = new System.Drawing.Size(204, 30);
+            this.tbPassword.TabIndex = 4;
             // 
             // Signin
             // 
@@ -121,8 +122,8 @@ namespace WinFormsApp1
             this.ClientSize = new System.Drawing.Size(625, 318);
             this.Controls.Add(this.Signup);
             this.Controls.Add(this.Signin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPassword);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.SuperTEEN);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
@@ -138,10 +139,11 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label Username;
         private System.Windows.Forms.Label Password;
         private System.Windows.Forms.Label SuperTEEN;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button Signin;
         private System.Windows.Forms.Button Signup;
+        private System.Windows.Forms.TextBox tbPassword;
     }
 }
 

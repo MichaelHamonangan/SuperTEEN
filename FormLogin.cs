@@ -20,8 +20,9 @@ namespace WinFormsApp1
         private void Signin_Click(object sender, EventArgs e)
         {
             //Login, check username password
+            //sementara masih contoh dengan masukan level 1 dan exp 0
             Hide();
-            Pengguna user = new Pengguna();
+            Pengguna user = new Pengguna(tbUsername.Text,1,0) ;
             user.PilihModul();
         }
 

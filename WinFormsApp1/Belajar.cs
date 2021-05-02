@@ -14,14 +14,14 @@ namespace WinFormsApp1
         public string[] Task;
         public int[] drTask;
 
-        public Belajar(string modulName, int exp, int i) : base(modulName, exp)
+        public Belajar(string modulName, int exp, int n) : base(modulName, exp)
         {
             ModulName = modulName;
             ExpGained = exp;
-            NOTask = i;
+            NOTask = n;
 
-            Task = new string[NOTask];
-            drTask = new int[NOTask];
+            Task = new string[n];
+            drTask = new int[n];
         }
 
         public override int ModulExecute()

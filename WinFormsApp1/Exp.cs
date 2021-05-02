@@ -6,13 +6,16 @@ namespace WinFormsApp1
 {
     class Exp
     {
-        public int currentExp;
-        public int currentLevel;
+        private int currentExp;
+        private int currentLevel;
+
+        public int CurrentExp { get => currentExp; set => currentExp = value; }
+        public int CurrentLevel { get => currentLevel; set => currentLevel = value; }
 
         public Exp(int poin, int level)
         {
-            currentExp = poin;
-            currentLevel = level;
+            CurrentExp = poin;
+            CurrentLevel = level;
         }
 
         public void GainExp(int Exp)

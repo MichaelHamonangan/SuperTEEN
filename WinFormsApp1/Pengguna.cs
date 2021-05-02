@@ -4,12 +4,15 @@ using System.Text;
 
 namespace WinFormsApp1
 {
-    public class Pengguna
+    class Pengguna
     {
         private string username;
         private int level;
         private int exp;
         private Exp pengalaman;
+        public Belajar[] arrBelajar;
+        public Kesehatan[] arrKesehatan;
+        public Motivasi[] arrMotivasi;
 
         public string Username { get => username; set => username = value; }
         public int Level { get => level; set => level = value; }
@@ -25,19 +28,17 @@ namespace WinFormsApp1
             Pengalaman = new Exp(level,exp);
         }
 
-        public void PilihModul()
+        public void ModulGenerator()
         {
-            ModulGenerator();
+            //membuat semua modul dari database dimasukan dalam list modul
+            List<Belajar> lstBelajar = new List<Belajar>();
+            List<Kesehatan> lstKesehatan = new List<Kesehatan>();
+            List<Motivasi> lstMotivasi = new List<Motivasi>();
 
-            FormModul Form = new FormModul(Username,Level,exp);
-            Form.ShowDialog();
-
-            //ketika menjalankan modul melalui form, nilai akan di return dan kemudian ditambahkan dalam class exp
-        }
-
-        private void ModulGenerator()
-        {
-            //membuat semua modul melalui database menjadi objek objek modul
+            //mengubah list ke bentuk array
+            arrBelajar = lstBelajar.ToArray();
+            arrKesehatan = lstKesehatan.ToArray();
+            arrMotivasi = lstMotivasi.ToArray();
         }
     }
 }

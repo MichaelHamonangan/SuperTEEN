@@ -34,8 +34,8 @@ namespace WinFormsApp1
             this.SuperTEEN = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.Signin = new System.Windows.Forms.Button();
-            this.Signup = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Username
@@ -84,35 +84,35 @@ namespace WinFormsApp1
             this.tbPassword.Size = new System.Drawing.Size(204, 30);
             this.tbPassword.TabIndex = 4;
             // 
-            // Signin
+            // btnLogin
             // 
-            this.Signin.BackColor = System.Drawing.Color.DarkCyan;
-            this.Signin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Signin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Signin.Location = new System.Drawing.Point(152, 244);
-            this.Signin.Name = "Signin";
-            this.Signin.Size = new System.Drawing.Size(105, 32);
-            this.Signin.TabIndex = 5;
-            this.Signin.Text = "Login";
-            this.Signin.UseVisualStyleBackColor = false;
-            this.Signin.Click += new System.EventHandler(this.Signin_Click);
-            this.Signin.MouseLeave += new System.EventHandler(this.Signin_MouseLeave);
-            this.Signin.MouseHover += new System.EventHandler(this.Signin_MouseHover);
+            this.btnLogin.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnLogin.Location = new System.Drawing.Point(152, 244);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(105, 32);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
+            this.btnLogin.MouseHover += new System.EventHandler(this.btnLogin_MouseHover);
             // 
-            // Signup
+            // btnSignUp
             // 
-            this.Signup.BackColor = System.Drawing.Color.DarkCyan;
-            this.Signup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Signup.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Signup.Location = new System.Drawing.Point(354, 244);
-            this.Signup.Name = "Signup";
-            this.Signup.Size = new System.Drawing.Size(105, 32);
-            this.Signup.TabIndex = 6;
-            this.Signup.Text = "Sign Up";
-            this.Signup.UseVisualStyleBackColor = false;
-            this.Signup.Click += new System.EventHandler(this.Signup_Click);
-            this.Signup.MouseLeave += new System.EventHandler(this.Signup_MouseLeave);
-            this.Signup.MouseHover += new System.EventHandler(this.Signup_MouseHover);
+            this.btnSignUp.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignUp.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnSignUp.Location = new System.Drawing.Point(354, 244);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(105, 32);
+            this.btnSignUp.TabIndex = 6;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            this.btnSignUp.MouseLeave += new System.EventHandler(this.btnSignUp_MouseLeave);
+            this.btnSignUp.MouseHover += new System.EventHandler(this.btnSignUp_MouseHover);
             // 
             // FormLogin
             // 
@@ -120,15 +120,15 @@ namespace WinFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WinFormsApp1.Properties.Resources.e77ec7693867e901290ce8d2b3e04f1c;
             this.ClientSize = new System.Drawing.Size(625, 318);
-            this.Controls.Add(this.Signup);
-            this.Controls.Add(this.Signin);
+            this.Controls.Add(this.btnSignUp);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.SuperTEEN);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
             this.Name = "FormLogin";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,8 +141,8 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label SuperTEEN;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button Signin;
-        private System.Windows.Forms.Button Signup;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.TextBox tbPassword;
     }
 }

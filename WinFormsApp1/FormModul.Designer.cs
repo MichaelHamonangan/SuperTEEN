@@ -29,26 +29,26 @@ namespace WinFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTextelamatDatang = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.Judul = new System.Windows.Forms.Label();
-            this.Level = new System.Windows.Forms.Label();
-            this.mdlKesehatan = new System.Windows.Forms.Button();
-            this.mdlBelajar = new System.Windows.Forms.Button();
-            this.mdlMotivasi = new System.Windows.Forms.Button();
+            this.lblTextLevel = new System.Windows.Forms.Label();
+            this.btnKesehatan = new System.Windows.Forms.Button();
+            this.btnBelajar = new System.Windows.Forms.Button();
+            this.btnMotivasi = new System.Windows.Forms.Button();
             this.lblLevel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTextelamatDatang
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("STCaiyun", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(809, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Selamat Datang";
+            this.lblTextelamatDatang.AutoSize = true;
+            this.lblTextelamatDatang.BackColor = System.Drawing.Color.Transparent;
+            this.lblTextelamatDatang.Font = new System.Drawing.Font("STCaiyun", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTextelamatDatang.Location = new System.Drawing.Point(809, 32);
+            this.lblTextelamatDatang.Name = "lblTextelamatDatang";
+            this.lblTextelamatDatang.Size = new System.Drawing.Size(221, 28);
+            this.lblTextelamatDatang.TabIndex = 0;
+            this.lblTextelamatDatang.Text = "Selamat Datang";
             // 
             // lblUsername
             // 
@@ -72,61 +72,64 @@ namespace WinFormsApp1
             this.Judul.TabIndex = 2;
             this.Judul.Text = "SuperTEEN";
             // 
-            // Level
+            // lblTextLevel
             // 
-            this.Level.AutoSize = true;
-            this.Level.BackColor = System.Drawing.Color.Transparent;
-            this.Level.Font = new System.Drawing.Font("STCaiyun", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Level.Location = new System.Drawing.Point(28, 33);
-            this.Level.Name = "Level";
-            this.Level.Size = new System.Drawing.Size(74, 28);
-            this.Level.TabIndex = 3;
-            this.Level.Text = "Level";
+            this.lblTextLevel.AutoSize = true;
+            this.lblTextLevel.BackColor = System.Drawing.Color.Transparent;
+            this.lblTextLevel.Font = new System.Drawing.Font("STCaiyun", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTextLevel.Location = new System.Drawing.Point(28, 33);
+            this.lblTextLevel.Name = "lblTextLevel";
+            this.lblTextLevel.Size = new System.Drawing.Size(74, 28);
+            this.lblTextLevel.TabIndex = 3;
+            this.lblTextLevel.Text = "Level";
             // 
-            // mdlKesehatan
+            // btnKesehatan
             // 
-            this.mdlKesehatan.BackColor = System.Drawing.Color.Red;
-            this.mdlKesehatan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mdlKesehatan.Font = new System.Drawing.Font("Segoe UI", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.mdlKesehatan.ForeColor = System.Drawing.Color.Snow;
-            this.mdlKesehatan.Location = new System.Drawing.Point(332, 151);
-            this.mdlKesehatan.Name = "mdlKesehatan";
-            this.mdlKesehatan.Size = new System.Drawing.Size(351, 100);
-            this.mdlKesehatan.TabIndex = 4;
-            this.mdlKesehatan.Text = "MODUL KESEHATAN";
-            this.mdlKesehatan.UseVisualStyleBackColor = false;
-            this.mdlKesehatan.MouseLeave += new System.EventHandler(this.mdlKesehatan_MouseLeave);
-            this.mdlKesehatan.MouseHover += new System.EventHandler(this.mdlKesehatan_MouseHover);
+            this.btnKesehatan.BackColor = System.Drawing.Color.Red;
+            this.btnKesehatan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKesehatan.Font = new System.Drawing.Font("Segoe UI", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnKesehatan.ForeColor = System.Drawing.Color.Snow;
+            this.btnKesehatan.Location = new System.Drawing.Point(332, 151);
+            this.btnKesehatan.Name = "btnKesehatan";
+            this.btnKesehatan.Size = new System.Drawing.Size(351, 100);
+            this.btnKesehatan.TabIndex = 4;
+            this.btnKesehatan.Text = "MODUL KESEHATAN";
+            this.btnKesehatan.UseVisualStyleBackColor = false;
+            this.btnKesehatan.Click += new System.EventHandler(this.btnKesehatan_Click);
+            this.btnKesehatan.MouseLeave += new System.EventHandler(this.btnKesehatan_MouseLeave);
+            this.btnKesehatan.MouseHover += new System.EventHandler(this.btnKesehatan_MouseHover);
             // 
-            // mdlBelajar
+            // btnBelajar
             // 
-            this.mdlBelajar.BackColor = System.Drawing.Color.Teal;
-            this.mdlBelajar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mdlBelajar.Font = new System.Drawing.Font("Segoe UI", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.mdlBelajar.ForeColor = System.Drawing.Color.Azure;
-            this.mdlBelajar.Location = new System.Drawing.Point(332, 289);
-            this.mdlBelajar.Name = "mdlBelajar";
-            this.mdlBelajar.Size = new System.Drawing.Size(351, 100);
-            this.mdlBelajar.TabIndex = 5;
-            this.mdlBelajar.Text = "MODUL BELAJAR";
-            this.mdlBelajar.UseVisualStyleBackColor = false;
-            this.mdlBelajar.MouseLeave += new System.EventHandler(this.mdlBelajar_MouseLeave);
-            this.mdlBelajar.MouseHover += new System.EventHandler(this.mdlBelajar_MouseHover);
+            this.btnBelajar.BackColor = System.Drawing.Color.Teal;
+            this.btnBelajar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBelajar.Font = new System.Drawing.Font("Segoe UI", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBelajar.ForeColor = System.Drawing.Color.Azure;
+            this.btnBelajar.Location = new System.Drawing.Point(332, 289);
+            this.btnBelajar.Name = "btnBelajar";
+            this.btnBelajar.Size = new System.Drawing.Size(351, 100);
+            this.btnBelajar.TabIndex = 5;
+            this.btnBelajar.Text = "MODUL BELAJAR";
+            this.btnBelajar.UseVisualStyleBackColor = false;
+            this.btnBelajar.Click += new System.EventHandler(this.btnBelajar_Click);
+            this.btnBelajar.MouseLeave += new System.EventHandler(this.btnBelajar_MouseLeave);
+            this.btnBelajar.MouseHover += new System.EventHandler(this.btnBelajar_MouseHover);
             // 
-            // mdlMotivasi
+            // btnMotivasi
             // 
-            this.mdlMotivasi.BackColor = System.Drawing.Color.Blue;
-            this.mdlMotivasi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mdlMotivasi.Font = new System.Drawing.Font("Segoe UI", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.mdlMotivasi.ForeColor = System.Drawing.Color.LightCyan;
-            this.mdlMotivasi.Location = new System.Drawing.Point(332, 423);
-            this.mdlMotivasi.Name = "mdlMotivasi";
-            this.mdlMotivasi.Size = new System.Drawing.Size(351, 100);
-            this.mdlMotivasi.TabIndex = 6;
-            this.mdlMotivasi.Text = "MODUL MOTIVASI";
-            this.mdlMotivasi.UseVisualStyleBackColor = false;
-            this.mdlMotivasi.MouseLeave += new System.EventHandler(this.mdlMotivasi_MouseLeave);
-            this.mdlMotivasi.MouseHover += new System.EventHandler(this.mdlMotivasi_MouseHover);
+            this.btnMotivasi.BackColor = System.Drawing.Color.Blue;
+            this.btnMotivasi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMotivasi.Font = new System.Drawing.Font("Segoe UI", 11.8209F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMotivasi.ForeColor = System.Drawing.Color.LightCyan;
+            this.btnMotivasi.Location = new System.Drawing.Point(332, 423);
+            this.btnMotivasi.Name = "btnMotivasi";
+            this.btnMotivasi.Size = new System.Drawing.Size(351, 100);
+            this.btnMotivasi.TabIndex = 6;
+            this.btnMotivasi.Text = "MODUL MOTIVASI";
+            this.btnMotivasi.UseVisualStyleBackColor = false;
+            this.btnMotivasi.Click += new System.EventHandler(this.btnMotivasi_Click);
+            this.btnMotivasi.MouseLeave += new System.EventHandler(this.btnMotivasi_MouseLeave);
+            this.btnMotivasi.MouseHover += new System.EventHandler(this.btnMotivasi_MouseHover);
             // 
             // lblLevel
             // 
@@ -147,15 +150,15 @@ namespace WinFormsApp1
             this.BackgroundImage = global::WinFormsApp1.Properties.Resources._4mJtkR;
             this.ClientSize = new System.Drawing.Size(1042, 540);
             this.Controls.Add(this.lblLevel);
-            this.Controls.Add(this.mdlMotivasi);
-            this.Controls.Add(this.mdlBelajar);
-            this.Controls.Add(this.mdlKesehatan);
-            this.Controls.Add(this.Level);
+            this.Controls.Add(this.btnMotivasi);
+            this.Controls.Add(this.btnBelajar);
+            this.Controls.Add(this.btnKesehatan);
+            this.Controls.Add(this.lblTextLevel);
             this.Controls.Add(this.Judul);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTextelamatDatang);
             this.Name = "FormModul";
-            this.Text = "MODUL BELAJAR";
+            this.Text = "Modul";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,17 +166,19 @@ namespace WinFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSelamatDatang;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label Judul;
-        private System.Windows.Forms.Label Level;
+        private System.Windows.Forms.Label lblTextLevel;
         private System.Windows.Forms.Button modulKesehatan;
         private System.Windows.Forms.Button modulBelajar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button modulMotivasi;
         private System.Windows.Forms.Button mdlMotivasi;
-        private System.Windows.Forms.Button mdlBelajar;
-        private System.Windows.Forms.Button mdlKesehatan;
+        private System.Windows.Forms.Button btnBelajar;
+        private System.Windows.Forms.Button btnKesehatan;
         private System.Windows.Forms.Label lblLevel;
+        private System.Windows.Forms.Button btnMotivasi;
+        private System.Windows.Forms.Label lblTextelamatDatang;
     }
 }

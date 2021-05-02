@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace WinFormsApp1
 {
     class Kesehatan : Modul
     {
-        private int NOTask;
-        private string[] Task;
-        private int[] drTask;
+        public int NOTask;
+        public string[] Task;
+        public int[] drTask;
 
         public Kesehatan(string modulName, int exp, int i) : base(modulName, exp)
         {

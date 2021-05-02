@@ -17,38 +17,43 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        private void Signin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Login, check username password
-            //sementara masih contoh dengan masukan level 1 dan exp 0
-            Hide();
-            Pengguna user = new Pengguna(tbUsername.Text,1,0) ;
-            user.PilihModul();
+            //Login, check username password dari database
+            //Level dan Current Exp diambil dari database
+            //Sementara masih contoh dengan masukan level 1 dan Current Exp 0 
+            this.Hide();
+            Pengguna user = new Pengguna(tbUsername.Text, 1, 0);
+            user.ModulGenerator();
+            FormModul Modul = new FormModul(user);
+            Modul.ShowDialog();
         }
 
-        private void Signup_Click(object sender, EventArgs e)
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
-            // Create new database about user
+            this.Hide();
+            FormSignUp SignUp = new FormSignUp();
+            SignUp.ShowDialog();
         }
 
-        private void Signin_MouseHover(object sender, EventArgs e)
+        private void btnLogin_MouseHover(object sender, EventArgs e)
         {
-            Signin.BackColor = Color.DarkGray;
+            btnLogin.BackColor = Color.DarkGray;
         }
 
-        private void Signin_MouseLeave(object sender, EventArgs e)
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
         {
-            Signin.BackColor = Color.DarkCyan;
+            btnLogin.BackColor = Color.DarkCyan;
         }
 
-        private void Signup_MouseHover(object sender, EventArgs e)
+        private void btnSignUp_MouseHover(object sender, EventArgs e)
         {
-            Signup.BackColor = Color.DarkGray;
+            btnSignUp.BackColor = Color.DarkGray;
         }
 
-        private void Signup_MouseLeave(object sender, EventArgs e)
+        private void btnSignUp_MouseLeave(object sender, EventArgs e)
         {
-            Signup.BackColor = Color.DarkCyan;
+            btnSignUp.BackColor = Color.DarkCyan;
         }
     }
 }

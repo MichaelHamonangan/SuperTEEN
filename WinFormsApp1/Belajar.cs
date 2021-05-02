@@ -10,9 +10,9 @@ namespace WinFormsApp1
 {
     class Belajar : Modul
     {
-        private int NOTask;
-        private string[] Task;
-        private int[] drTask;
+        public int NOTask;
+        public string[] Task;
+        public int[] drTask;
 
         public Belajar(string modulName, int exp, int i) : base(modulName, exp)
         {

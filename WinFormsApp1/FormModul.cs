@@ -8,44 +8,63 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class FormModul : Form
+    partial class FormModul : Form
     {
-        public FormModul(string Nama,int level,int exp)
+        public Pengguna User;
+        public FormModul(Pengguna user)
         {
+            User = user;
             InitializeComponent();
-            lblUsername.Text = Nama;
-            lblLevel.Text = level.ToString() ;
-            //komponen komponen lain akan dilanjutkan disini
+            lblUsername.Text = user.Username;
+            lblLevel.Text = user.Level.ToString();
         }
 
-        private void mdlKesehatan_MouseHover(object sender, EventArgs e)
+        private void btnKesehatan_MouseHover(object sender, EventArgs e)
         {
-            mdlKesehatan.BackColor = Color.DarkRed;
+            btnKesehatan.BackColor = Color.DarkRed;
         }
 
-        private void mdlKesehatan_MouseLeave(object sender, EventArgs e)
+        private void btnKesehatan_MouseLeave(object sender, EventArgs e)
         {
-            mdlKesehatan.BackColor = Color.Red;
+            btnKesehatan.BackColor = Color.Red;
         }
 
-        private void mdlBelajar_MouseHover(object sender, EventArgs e)
+        private void btnBelajar_MouseHover(object sender, EventArgs e)
         {
-            mdlBelajar.BackColor = Color.DimGray;
+            btnBelajar.BackColor = Color.DimGray;
         }
 
-        private void mdlBelajar_MouseLeave(object sender, EventArgs e)
+        private void btnBelajar_MouseLeave(object sender, EventArgs e)
         {
-            mdlBelajar.BackColor = Color.Teal;
+            btnBelajar.BackColor = Color.Teal;
         }
 
-        private void mdlMotivasi_MouseHover(object sender, EventArgs e)
+        private void btnMotivasi_MouseHover(object sender, EventArgs e)
         {
-            mdlMotivasi.BackColor = Color.DarkBlue;
+            btnMotivasi.BackColor = Color.DarkBlue;
         }
 
-        private void mdlMotivasi_MouseLeave(object sender, EventArgs e)
+        private void btnMotivasi_MouseLeave(object sender, EventArgs e)
         {
-            mdlMotivasi.BackColor = Color.Blue;
+            btnMotivasi.BackColor = Color.Blue;
+        }
+
+        private void btnKesehatan_Click(object sender, EventArgs e)
+        {
+            FormKategori kesehatan = new FormKategori(User.arrKesehatan);
+            kesehatan.ShowDialog();
+        }
+
+        private void btnBelajar_Click(object sender, EventArgs e)
+        {
+            FormKategori belajar = new FormKategori(User.arrBelajar);
+            belajar.ShowDialog();
+        }
+
+        private void btnMotivasi_Click(object sender, EventArgs e)
+        {
+            FormKategori motivasi = new FormKategori(User.arrMotivasi);
+            motivasi.ShowDialog();
         }
     }
 }

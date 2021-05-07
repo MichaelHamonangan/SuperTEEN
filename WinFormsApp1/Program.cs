@@ -11,7 +11,7 @@ namespace WinFormsApp1
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
-        /// apapun itu
+        /// apapun itu asas
         [STAThread]
         static void Main()
         {

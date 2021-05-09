@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace SuperTEEN
+{
+    partial class FormRunMotivasi : Form
+    {
+        public int ExpGained;
+        private Motivasi motivasi;
+        public FormRunMotivasi(Motivasi motivasi)
+        {
+            InitializeComponent();
+            lblNamaModul.Text = motivasi.ModulName;
+            lblTask.Text = motivasi.task;
+            this.motivasi = motivasi;
+        }
+
+        private void btnSelesai_Click(object sender, EventArgs e)
+        {
+            if (rtbIsi.TextLength >= 100)
+            {
+                ExpGained = motivasi.ExpGained;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Task selesai apabila huruf dalam box lebih dari 100 huruf!!!");
+            }
+        }
+    }
+}

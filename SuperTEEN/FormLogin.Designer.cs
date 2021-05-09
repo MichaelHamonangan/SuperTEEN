@@ -37,6 +37,7 @@ namespace SuperTEEN
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
+            this.cbShow = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Username
@@ -125,12 +126,25 @@ namespace SuperTEEN
             this.btnSignUp.MouseLeave += new System.EventHandler(this.btnSignUp_MouseLeave);
             this.btnSignUp.MouseHover += new System.EventHandler(this.btnSignUp_MouseHover);
             // 
+            // cbShow
+            // 
+            this.cbShow.AutoSize = true;
+            this.cbShow.Location = new System.Drawing.Point(469, 163);
+            this.cbShow.Name = "cbShow";
+            this.cbShow.Size = new System.Drawing.Size(63, 20);
+            this.cbShow.TabIndex = 7;
+            this.cbShow.Text = "Show";
+            this.cbShow.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.cbShow.UseVisualStyleBackColor = true;
+            this.cbShow.CheckStateChanged += new System.EventHandler(this.cbShow_CheckStateChanged);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(588, 310);
+            this.Controls.Add(this.cbShow);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
@@ -156,6 +170,7 @@ namespace SuperTEEN
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.CheckBox cbShow;
     }
 }
 

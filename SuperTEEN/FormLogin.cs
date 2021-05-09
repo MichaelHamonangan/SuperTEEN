@@ -81,5 +81,17 @@ namespace SuperTEEN
         {
             btnSignUp.BackColor = Color.DarkCyan;
         }
+
+        private void cbShow_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (cbShow.Checked)
+            {
+                tbPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                tbPassword.PasswordChar = '*';
+            }
+        }
     }
 }

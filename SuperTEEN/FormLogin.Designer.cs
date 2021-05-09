@@ -44,7 +44,7 @@ namespace SuperTEEN
             this.Username.AutoSize = true;
             this.Username.BackColor = System.Drawing.SystemColors.Window;
             this.Username.Font = new System.Drawing.Font("Segoe UI", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(113, 98);
+            this.Username.Location = new System.Drawing.Point(113, 104);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(96, 23);
             this.Username.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace SuperTEEN
             this.Password.AutoSize = true;
             this.Password.BackColor = System.Drawing.SystemColors.Window;
             this.Password.Font = new System.Drawing.Font("Segoe UI", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(116, 157);
+            this.Password.Location = new System.Drawing.Point(120, 163);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(89, 23);
             this.Password.TabIndex = 1;
@@ -74,19 +74,21 @@ namespace SuperTEEN
             // 
             // tbUsername
             // 
+            this.tbUsername.Font = new System.Drawing.Font("Nirmala UI", 8.059701F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsername.Location = new System.Drawing.Point(243, 100);
             this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(220, 22);
+            this.tbUsername.Size = new System.Drawing.Size(220, 27);
             this.tbUsername.TabIndex = 3;
             // 
             // tbPassword
             // 
+            this.tbPassword.Font = new System.Drawing.Font("Nirmala UI", 8.059701F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(242, 159);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(220, 22);
+            this.tbPassword.Size = new System.Drawing.Size(220, 27);
             this.tbPassword.TabIndex = 4;
             // 
             // btnLogin

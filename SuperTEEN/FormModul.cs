@@ -15,8 +15,11 @@ namespace SuperTEEN
         {
             User = user;
             InitializeComponent();
-            lblUsername.Text = user.Username;
-            lblLevel.Text = user.Level.ToString();
+            lblUsername.Text = User.Username;
+            lblLevel.Text = User.Pengalaman.CurrentLevel.ToString();
+
+            ttLevel.SetToolTip(lblLevel, "Your current exp : " + User.Pengalaman.CurrentExp.ToString());
+            ttLevel.SetToolTip(lblTextLevel, "Your current exp : " + User.Pengalaman.CurrentExp.ToString());
         }
 
         private void btnKesehatan_MouseHover(object sender, EventArgs e)
@@ -51,20 +54,28 @@ namespace SuperTEEN
 
         private void btnKesehatan_Click(object sender, EventArgs e)
         {
-            FormKategori kesehatan = new FormKategori(User.arrKesehatan);
+            FormKategori kesehatan = new FormKategori(User.Pengalaman, "kesehatan");
             kesehatan.ShowDialog();
         }
 
         private void btnBelajar_Click(object sender, EventArgs e)
         {
-            FormKategori belajar = new FormKategori(User.arrBelajar);
+            FormKategori belajar = new FormKategori(User.Pengalaman, "belajar");
             belajar.ShowDialog();
         }
 
         private void btnMotivasi_Click(object sender, EventArgs e)
         {
-            FormKategori motivasi = new FormKategori(User.arrMotivasi);
+            FormKategori motivasi = new FormKategori(User.Pengalaman, "motivasi");
             motivasi.ShowDialog();
+        }
+
+        private void FormModul_MouseEnter(object sender, EventArgs e)
+        {
+            lblLevel.Text = User.Pengalaman.CurrentLevel.ToString();
+
+            ttLevel.SetToolTip(lblLevel, "Your current exp : " + User.Pengalaman.CurrentExp.ToString());
+            ttLevel.SetToolTip(lblTextLevel, "Your current exp : " + User.Pengalaman.CurrentExp.ToString());
         }
     }
 }

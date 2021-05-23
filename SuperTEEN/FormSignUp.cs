@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -21,25 +22,36 @@ namespace SuperTEEN
             {
                 using (var db = new DatabaseUser())
                 {
-                    try
+                    var result =db.Users.SingleOrDefault(k => k.Username == tbNewUsername.Text);
+                    if (result != null)
                     {
-                        newUser = new User
-                        {
-                            Username = tbNewUsername.Text,
-                            Password = tbNewPassword.Text,
-                            Level = 1,
-                            Current_Exp = 0,
-                        };
-                        db.Users.Add(newUser);
-                        db.SaveChanges();
-                        MessageBox.Show("User telah ditambahkan! Silahkan Login!!!");
-                        this.Hide();
-                        FormLogin login = new FormLogin();
-                        login.ShowDialog();
+                        MessageBox.Show("Username telah dipakai!!!");
                     }
-                    catch (Exception)
+                    else
                     {
-                        MessageBox.Show("Maksimal panjang Username adalah 15 dan panjang Password adalah 50!!!");
+                        try
+                        {
+                            var rand = new Random();
+                            newUser = new User
+                            {
+                                Id = rand.Next(1000000),
+                                Username = tbNewUsername.Text,
+                                Password = tbNewPassword.Text,
+                                Level = 1,
+                                Current_Exp = 0,
+                            };
+                            db.Users.Add(newUser);
+                            db.SaveChanges();
+                            MessageBox.Show("User telah ditambahkan! Silahkan Login!!!");
+                            this.Hide();
+                            FormLogin login = new FormLogin();
+                            login.ShowDialog();
+
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Maksimal panjang Username adalah 15 dan panjang Password adalah 20!!!");
+                        }
                     }
                 }
             }
@@ -66,6 +78,26 @@ namespace SuperTEEN
             this.Hide();
             FormLogin login = new FormLogin();
             login.ShowDialog();
+        }
+
+        private void btnCreate_MouseHover(object sender, EventArgs e)
+        {
+            btnCreate.BackColor = Color.DarkGray;
+        }
+
+        private void btnCreate_MouseLeave(object sender, EventArgs e)
+        {
+            btnCreate.BackColor = Color.DarkCyan;
+        }
+
+        private void btnBack_MouseHover(object sender, EventArgs e)
+        {
+            btnBack.BackColor = Color.DarkGray;
+        }
+
+        private void btnBack_MouseLeave(object sender, EventArgs e)
+        {
+            btnBack.BackColor = Color.DarkCyan;
         }
     }
 }

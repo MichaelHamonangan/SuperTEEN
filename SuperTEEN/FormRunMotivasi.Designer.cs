@@ -38,6 +38,7 @@ namespace SuperTEEN
             // lblNamaModul
             // 
             this.lblNamaModul.AutoEllipsis = true;
+            this.lblNamaModul.BackColor = System.Drawing.Color.Transparent;
             this.lblNamaModul.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblNamaModul.Font = new System.Drawing.Font("Segoe UI", 13.97015F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNamaModul.Location = new System.Drawing.Point(0, 0);
@@ -50,6 +51,7 @@ namespace SuperTEEN
             // lblTask
             // 
             this.lblTask.AutoEllipsis = true;
+            this.lblTask.BackColor = System.Drawing.Color.Transparent;
             this.lblTask.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTask.Font = new System.Drawing.Font("Segoe UI", 10.74627F);
             this.lblTask.Location = new System.Drawing.Point(0, 36);
@@ -62,14 +64,18 @@ namespace SuperTEEN
             // 
             // btnSelesai
             // 
+            this.btnSelesai.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnSelesai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelesai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSelesai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelesai.Location = new System.Drawing.Point(299, 312);
+            this.btnSelesai.ForeColor = System.Drawing.Color.White;
+            this.btnSelesai.Location = new System.Drawing.Point(316, 312);
             this.btnSelesai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSelesai.Name = "btnSelesai";
             this.btnSelesai.Size = new System.Drawing.Size(93, 39);
             this.btnSelesai.TabIndex = 5;
             this.btnSelesai.Text = "Selesai";
-            this.btnSelesai.UseVisualStyleBackColor = true;
+            this.btnSelesai.UseVisualStyleBackColor = false;
             this.btnSelesai.Click += new System.EventHandler(this.btnSelesai_Click);
             // 
             // rtbIsi
@@ -85,6 +91,7 @@ namespace SuperTEEN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SuperTEEN.Properties.Resources.Light_Flat_Shapes_Simple_Background_Orange;
             this.ClientSize = new System.Drawing.Size(711, 362);
             this.Controls.Add(this.rtbIsi);
             this.Controls.Add(this.btnSelesai);

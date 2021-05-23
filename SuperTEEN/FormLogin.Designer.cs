@@ -45,7 +45,7 @@ namespace SuperTEEN
             this.Username.AutoSize = true;
             this.Username.BackColor = System.Drawing.SystemColors.Window;
             this.Username.Font = new System.Drawing.Font("Segoe UI", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(113, 104);
+            this.Username.Location = new System.Drawing.Point(100, 104);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(96, 23);
             this.Username.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace SuperTEEN
             this.Password.AutoSize = true;
             this.Password.BackColor = System.Drawing.SystemColors.Window;
             this.Password.Font = new System.Drawing.Font("Segoe UI", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(120, 163);
+            this.Password.Location = new System.Drawing.Point(107, 162);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(89, 23);
             this.Password.TabIndex = 1;
@@ -76,32 +76,33 @@ namespace SuperTEEN
             // tbUsername
             // 
             this.tbUsername.Font = new System.Drawing.Font("Nirmala UI", 8.059701F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsername.Location = new System.Drawing.Point(243, 100);
+            this.tbUsername.Location = new System.Drawing.Point(227, 103);
             this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(220, 27);
+            this.tbUsername.Size = new System.Drawing.Size(235, 27);
             this.tbUsername.TabIndex = 3;
             // 
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Nirmala UI", 8.059701F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(242, 159);
+            this.tbPassword.Location = new System.Drawing.Point(227, 162);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(220, 27);
+            this.tbPassword.Size = new System.Drawing.Size(235, 27);
             this.tbPassword.TabIndex = 4;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DarkCyan;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnLogin.Location = new System.Drawing.Point(116, 245);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Location = new System.Drawing.Point(124, 245);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(93, 31);
+            this.btnLogin.Size = new System.Drawing.Size(93, 34);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -113,12 +114,13 @@ namespace SuperTEEN
             // 
             this.btnSignUp.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnSignUp.Location = new System.Drawing.Point(370, 245);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(93, 31);
+            this.btnSignUp.Size = new System.Drawing.Size(93, 34);
             this.btnSignUp.TabIndex = 6;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = false;
@@ -129,13 +131,14 @@ namespace SuperTEEN
             // cbShow
             // 
             this.cbShow.AutoSize = true;
-            this.cbShow.Location = new System.Drawing.Point(469, 163);
+            this.cbShow.BackColor = System.Drawing.Color.Transparent;
+            this.cbShow.Location = new System.Drawing.Point(484, 167);
             this.cbShow.Name = "cbShow";
             this.cbShow.Size = new System.Drawing.Size(63, 20);
             this.cbShow.TabIndex = 7;
             this.cbShow.Text = "Show";
             this.cbShow.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.cbShow.UseVisualStyleBackColor = true;
+            this.cbShow.UseVisualStyleBackColor = false;
             this.cbShow.CheckStateChanged += new System.EventHandler(this.cbShow_CheckStateChanged);
             // 
             // FormLogin
@@ -153,6 +156,8 @@ namespace SuperTEEN
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(608, 362);
+            this.MinimumSize = new System.Drawing.Size(608, 362);
             this.Name = "FormLogin";
             this.Text = "Login";
             this.ResumeLayout(false);

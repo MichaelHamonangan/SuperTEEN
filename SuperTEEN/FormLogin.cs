@@ -27,25 +27,28 @@ namespace SuperTEEN
             {
                 using (var db = new DatabaseUser())
                 {
-                    var query = from tempUser in db.Users where tempUser.Username == tbUsername.Text select tempUser;
-                    foreach (var item in query)
+                    var query = db.Users.SingleOrDefault(k => k.Username == tbUsername.Text);
+                    if (query != null)
                     {
-                        if (item.Password == tbPassword.Text)
+                        if (query.Password == tbPassword.Text)
                         {
-                            tempUsername = item.Username;
-                            tempLevel = item.Level;
-                            tempExp = item.Current_Exp;
+                            tempUsername = query.Username;
+                            tempLevel = query.Level;
+                            tempExp = query.Current_Exp;
 
                             this.Hide();
                             Pengguna user = new Pengguna(tempUsername, tempLevel, tempExp);
-                            user.ModulGenerator();
                             FormModul Modul = new FormModul(user);
                             Modul.ShowDialog();
                         }
                         else
                         {
-                            MessageBox.Show("Password Salah!!!");
+                            MessageBox.Show("Password tidak sesuai!!!");
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username tidak ditemukan!!!");
                     }
                 }
             }

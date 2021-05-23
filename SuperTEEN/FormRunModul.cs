@@ -8,12 +8,13 @@ using System.Windows.Forms;
 using System.Threading;
 using Timer = System.Windows.Forms.Timer;
 using System.Media;
+using System.Collections.Concurrent;
 
 namespace SuperTEEN
 {
     partial class FormRunModul : Form
     {
-        public int Exp_Gained;
+        Exp exp;
         public Kesehatan kesehatan;
         public Belajar belajar;
         public enum Mode { Kesehatan, Belajar }
@@ -21,10 +22,11 @@ namespace SuperTEEN
         Mode mode;
         Button button;
 
-        public FormRunModul(Kesehatan kesehatan)
+        public FormRunModul(Kesehatan kesehatan, Exp exp)
         {
             InitializeComponent();
             this.kesehatan = kesehatan;
+            this.exp = exp;
 
             lblNamaModul.Text = kesehatan.ModulName;
             lblTime.Text = kesehatan.Durasi.ToString();
@@ -32,7 +34,7 @@ namespace SuperTEEN
             button = Button.Jalankan;
         }
 
-        public FormRunModul(Belajar belajar)
+        public FormRunModul(Belajar belajar, Exp exp)
         {
             InitializeComponent();
             this.belajar = belajar;
@@ -51,6 +53,7 @@ namespace SuperTEEN
                 lblDurasi.Text = "Durasi Task :";
                 Application.DoEvents();
 
+                btnJalankan.Enabled = false;
                 if (mode == Mode.Kesehatan)
                 {
                     for (int i = 0; i < kesehatan.NOTask; i++)
@@ -67,26 +70,30 @@ namespace SuperTEEN
                 }
                 button = Button.Selesai;
                 btnJalankan.Text = "Selesai";
+                btnJalankan.Enabled = true;
+                btnBatalkan.Enabled = false;
             }
             else if (button == Button.Selesai)
             {
                 lblNamaModul.Text = "";
                 if (mode == Mode.Kesehatan)
                 {
-                    Exp_Gained = kesehatan.ExpGained;
+                    exp.GainExp(kesehatan.ExpGained);
                     this.Close();
                 }
                 else if (mode == Mode.Belajar)
                 {
-                    Exp_Gained = belajar.ExpGained;
+                    exp.GainExp(belajar.ExpGained);
                     this.Close();
                 }
             }
         }
 
+        BlockingCollection<int> _sleeper = new BlockingCollection<int>();
         private void TaskExecute(string task, int duration)
         {
-            if(mode == Mode.Kesehatan)
+            int dummy;
+            if (mode == Mode.Kesehatan)
             {
                 SystemSounds.Beep.Play();
                 lblTask.Text = task;
@@ -94,7 +101,7 @@ namespace SuperTEEN
                 {
                     lblTime.Text = duration.ToString();
                     Application.DoEvents();
-                    Thread.Sleep(1000);
+                    _sleeper.TryTake(out dummy, 1000);
                     duration--;
                 }
             }
@@ -102,13 +109,35 @@ namespace SuperTEEN
             {
                 SystemSounds.Beep.Play();
                 lblTask.Text = task;
-                while (duration > 0)
+                int temp = duration * 60;
+                while (temp > 0)
                 {
+                    temp--;
+                    duration = temp / 60 + 1;
                     lblTime.Text = duration.ToString();
                     Application.DoEvents();
-                    Thread.Sleep(1000*60);
-                    duration--;
+                    _sleeper.TryTake(out dummy, 1000);
                 }
+            }
+        }
+
+        private void btnBatalkan_Click(object sender, EventArgs e)
+        {
+            if (mode == Mode.Kesehatan)
+            {
+                for (int i = 0; i < (kesehatan.Durasi+10); i++)
+                {
+                    _sleeper.Add(0);
+                }
+                this.Close();
+            }
+            else if (mode == Mode.Belajar)
+            {
+                for (int i = 0; i < (belajar.Durasi+10)*60; i++)
+                {
+                    _sleeper.Add(0);
+                }
+                this.Close();
             }
         }
     }

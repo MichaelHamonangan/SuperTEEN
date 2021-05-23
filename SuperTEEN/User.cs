@@ -11,13 +11,13 @@ namespace SuperTEEN
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
-
         [Required]
-        [StringLength(50)]
+        [StringLength(15)]
+
         public string Username { get; set; }
 
         [Required]
-        [StringLength(15)]
+        [StringLength(20)]
         public string Password { get; set; }
 
         public int Level { get; set; }

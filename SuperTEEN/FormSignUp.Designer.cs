@@ -42,12 +42,13 @@ namespace SuperTEEN
             // 
             // lblTextIsiData
             // 
+            this.lblTextIsiData.BackColor = System.Drawing.Color.PeachPuff;
             this.lblTextIsiData.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTextIsiData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextIsiData.Location = new System.Drawing.Point(0, 0);
             this.lblTextIsiData.Name = "lblTextIsiData";
             this.lblTextIsiData.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.lblTextIsiData.Size = new System.Drawing.Size(448, 20);
+            this.lblTextIsiData.Size = new System.Drawing.Size(468, 29);
             this.lblTextIsiData.TabIndex = 0;
             this.lblTextIsiData.Text = "Isi data di bawah ini untuk membuat akun baru!";
             this.lblTextIsiData.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -110,32 +111,45 @@ namespace SuperTEEN
             // 
             // btnCreate
             // 
+            this.btnCreate.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCreate.Location = new System.Drawing.Point(76, 182);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(93, 30);
             this.btnCreate.TabIndex = 7;
             this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.btnCreate.MouseLeave += new System.EventHandler(this.btnCreate_MouseLeave);
+            this.btnCreate.MouseHover += new System.EventHandler(this.btnCreate_MouseHover);
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBack.Location = new System.Drawing.Point(282, 182);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(93, 30);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.MouseLeave += new System.EventHandler(this.btnBack_MouseLeave);
+            this.btnBack.MouseHover += new System.EventHandler(this.btnBack_MouseHover);
             // 
             // FormSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(448, 223);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCreate);
@@ -147,6 +161,8 @@ namespace SuperTEEN
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblTextIsiData);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(468, 275);
+            this.MinimumSize = new System.Drawing.Size(468, 275);
             this.Name = "FormSignUp";
             this.Text = "Sign Up";
             this.ResumeLayout(false);

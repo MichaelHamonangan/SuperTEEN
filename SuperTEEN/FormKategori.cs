@@ -11,44 +11,55 @@ namespace SuperTEEN
 {
     partial class FormKategori : Form
     {
+        Exp Pengalaman;
         public enum Mode {Kesehatan,Belajar,Motivasi}
         Mode mode;
-        //TbMotivasi tempMotivasi;
-        //TbBelajar tempBelajar;
-        //TbKesehatan tempKesehatan;
-        public FormKategori(Motivasi[] motivasi)
+        public FormKategori(Exp pengalaman,string tipe)
         {
             InitializeComponent();
-            mode = Mode.Motivasi;
-            lblKategori.Text = "Modul-Modul Motivasi";
+            Pengalaman = pengalaman;
 
-            foreach (Motivasi item in motivasi)
+            if (tipe == "motivasi")
             {
-                cbNamaModul.Items.Add(item.ModulName);
+                mode = Mode.Motivasi;
+                lblKategori.Text = "Modul-Modul Motivasi";
+
+                using (var db = new DatabaseModul())
+                {
+                    var query = from tbmotivasi in db.TbMotivasis select tbmotivasi;
+                    foreach (var item in query)
+                    {
+                        cbNamaModul.Items.Add(item.Nama_Modul);
+                    }
+                }
             }
-        }
-
-        public FormKategori(Belajar[] belajar)
-        {
-            InitializeComponent();
-            mode = Mode.Belajar;
-            lblKategori.Text = "Modul-Modul Belajar";
-
-            foreach (Belajar item in belajar)
+            else if (tipe == "belajar")
             {
-                cbNamaModul.Items.Add(item.ModulName);
+                mode = Mode.Belajar;
+                lblKategori.Text = "Modul-Modul Belajar";
+
+                using (var db = new DatabaseModul())
+                {
+                    var query = from tbbelajar in db.TbBelajars select tbbelajar;
+                    foreach (var item in query)
+                    {
+                        cbNamaModul.Items.Add(item.Nama_Modul);
+                    }
+                }
             }
-        }
-
-        public FormKategori(Kesehatan[] kesehatan)
-        {
-            InitializeComponent();
-            mode = Mode.Kesehatan;
-            lblKategori.Text = "Modul-Modul Kesehatan";
-
-            foreach (Kesehatan item in kesehatan)
+            else if (tipe == "kesehatan")
             {
-                cbNamaModul.Items.Add(item.ModulName);
+                mode = Mode.Kesehatan;
+                lblKategori.Text = "Modul-Modul Kesehatan";
+
+                using (var db = new DatabaseModul())
+                {
+                    var query = from tbkesehatan in db.TbKesehatans select tbkesehatan;
+                    foreach (var item in query)
+                    {
+                        cbNamaModul.Items.Add(item.Nama_Modul);
+                    }
+                }
             }
         }
 
@@ -64,7 +75,7 @@ namespace SuperTEEN
                         foreach (var item in query)
                         {
                             Motivasi motivasi = new Motivasi(item.Nama_Modul, item.Exp_Gain, item.Task);
-                            FormRunMotivasi form = new FormRunMotivasi(motivasi);
+                            FormRunMotivasi form = new FormRunMotivasi(motivasi, Pengalaman);
                             this.Hide();
                             form.ShowDialog();
                         }
@@ -79,7 +90,7 @@ namespace SuperTEEN
                         foreach (var item in query)
                         {
                             Belajar belajar = new Belajar(item.Nama_Modul, item.Exp_Gain, item.Jumlah_Task, item.Durasi);
-                            FormRunModul form = new FormRunModul(belajar);
+                            FormRunModul form = new FormRunModul(belajar, Pengalaman);
                             if (item.Task_1 != null)
                                 belajar.AddTask(item.Task_1, item.drTask_1);
                             if (item.Task_2 != null)
@@ -113,7 +124,7 @@ namespace SuperTEEN
                         foreach (var item in query)
                         {
                             Kesehatan kesehatan = new Kesehatan(item.Nama_Modul, item.Exp_Gain, item.Jumlah_Task, item.Durasi);
-                            FormRunModul form = new FormRunModul(kesehatan);
+                            FormRunModul form = new FormRunModul(kesehatan, Pengalaman);
                             if (item.Task_1 != null)
                                 kesehatan.AddTask(item.Task_1, item.drTask_1);
                             if (item.Task_2 != null)

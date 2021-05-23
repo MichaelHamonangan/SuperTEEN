@@ -29,6 +29,7 @@ namespace SuperTEEN
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModul));
             this.lblTextelamatDatang = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -38,16 +39,17 @@ namespace SuperTEEN
             this.btnBelajar = new System.Windows.Forms.Button();
             this.btnMotivasi = new System.Windows.Forms.Button();
             this.lblLevel = new System.Windows.Forms.Label();
+            this.ttLevel = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lblTextelamatDatang
             // 
             this.lblTextelamatDatang.AutoSize = true;
             this.lblTextelamatDatang.BackColor = System.Drawing.Color.Transparent;
-            this.lblTextelamatDatang.Font = new System.Drawing.Font("STCaiyun", 13.97015F, System.Drawing.FontStyle.Bold);
-            this.lblTextelamatDatang.Location = new System.Drawing.Point(741, 21);
+            this.lblTextelamatDatang.Font = new System.Drawing.Font("STCaiyun", 16.1194F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblTextelamatDatang.Location = new System.Drawing.Point(741, 29);
             this.lblTextelamatDatang.Name = "lblTextelamatDatang";
-            this.lblTextelamatDatang.Size = new System.Drawing.Size(221, 28);
+            this.lblTextelamatDatang.Size = new System.Drawing.Size(243, 31);
             this.lblTextelamatDatang.TabIndex = 0;
             this.lblTextelamatDatang.Text = "Selamat Datang";
             // 
@@ -56,7 +58,7 @@ namespace SuperTEEN
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Sitka Small", 10.74627F, System.Drawing.FontStyle.Bold);
-            this.lblUsername.Location = new System.Drawing.Point(740, 49);
+            this.lblUsername.Location = new System.Drawing.Point(741, 60);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(106, 31);
             this.lblUsername.TabIndex = 1;
@@ -77,10 +79,10 @@ namespace SuperTEEN
             // 
             this.lblTextLevel.AutoSize = true;
             this.lblTextLevel.BackColor = System.Drawing.Color.Transparent;
-            this.lblTextLevel.Font = new System.Drawing.Font("STCaiyun", 13.97015F, System.Drawing.FontStyle.Bold);
-            this.lblTextLevel.Location = new System.Drawing.Point(25, 23);
+            this.lblTextLevel.Font = new System.Drawing.Font("STCaiyun", 18.26866F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblTextLevel.Location = new System.Drawing.Point(48, 37);
             this.lblTextLevel.Name = "lblTextLevel";
-            this.lblTextLevel.Size = new System.Drawing.Size(74, 28);
+            this.lblTextLevel.Size = new System.Drawing.Size(92, 36);
             this.lblTextLevel.TabIndex = 3;
             this.lblTextLevel.Text = "Level";
             // 
@@ -139,10 +141,10 @@ namespace SuperTEEN
             // 
             this.lblLevel.AutoSize = true;
             this.lblLevel.BackColor = System.Drawing.Color.Transparent;
-            this.lblLevel.Font = new System.Drawing.Font("Showcard Gothic", 13.97015F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.Location = new System.Drawing.Point(95, 16);
+            this.lblLevel.Font = new System.Drawing.Font("Showcard Gothic", 18.26866F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.Location = new System.Drawing.Point(146, 29);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(37, 33);
+            this.lblLevel.Size = new System.Drawing.Size(47, 43);
             this.lblLevel.TabIndex = 7;
             this.lblLevel.Text = "//";
             // 
@@ -162,8 +164,11 @@ namespace SuperTEEN
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblTextelamatDatang);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1006, 536);
+            this.MinimumSize = new System.Drawing.Size(1006, 536);
             this.Name = "FormModul";
             this.Text = "Modul";
+            this.MouseEnter += new System.EventHandler(this.FormModul_MouseEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +190,6 @@ namespace SuperTEEN
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Button btnMotivasi;
         private System.Windows.Forms.Label lblTextelamatDatang;
+        private System.Windows.Forms.ToolTip ttLevel;
     }
 }

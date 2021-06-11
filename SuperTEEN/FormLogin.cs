@@ -12,7 +12,6 @@ namespace SuperTEEN
 {
     public partial class FormLogin : Form
     {
-        //User tempUser;
         string tempUsername;
         int tempLevel;
         int tempExp;

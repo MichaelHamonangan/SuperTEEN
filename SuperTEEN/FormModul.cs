@@ -17,9 +17,7 @@ namespace SuperTEEN
             InitializeComponent();
             lblUsername.Text = User.Username;
             lblLevel.Text = User.Pengalaman.CurrentLevel.ToString();
-
-            ttLevel.SetToolTip(lblLevel, "Your current exp : " + User.Pengalaman.CurrentExp.ToString());
-            ttLevel.SetToolTip(lblTextLevel, "Your current exp : " + User.Pengalaman.CurrentExp.ToString());
+            lblExp.Text = User.Pengalaman.CurrentExp.ToString() + "/" + User.Pengalaman.ExpToLevelUp.ToString() ;
         }
 
         private void btnKesehatan_MouseHover(object sender, EventArgs e)
@@ -73,9 +71,7 @@ namespace SuperTEEN
         private void FormModul_MouseEnter(object sender, EventArgs e)
         {
             lblLevel.Text = User.Pengalaman.CurrentLevel.ToString();
-
-            ttLevel.SetToolTip(lblLevel, "Your current exp : " + User.Pengalaman.CurrentExp.ToString());
-            ttLevel.SetToolTip(lblTextLevel, "Your current exp : " + User.Pengalaman.CurrentExp.ToString());
+            lblExp.Text = User.Pengalaman.CurrentExp.ToString() + "/" + User.Pengalaman.ExpToLevelUp.ToString();
         }
     }
 }

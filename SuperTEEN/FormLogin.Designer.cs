@@ -97,10 +97,10 @@ namespace SuperTEEN
             this.btnLogin.BackColor = System.Drawing.Color.DarkCyan;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Harrington", 9.134328F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnLogin.Location = new System.Drawing.Point(124, 245);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(93, 34);
             this.btnLogin.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace SuperTEEN
             this.btnSignUp.BackColor = System.Drawing.Color.DarkCyan;
             this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.Font = new System.Drawing.Font("Harrington", 9.134328F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnSignUp.Location = new System.Drawing.Point(370, 245);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -143,8 +143,8 @@ namespace SuperTEEN
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(134F, 134F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(588, 310);
             this.Controls.Add(this.cbShow);
@@ -159,6 +159,7 @@ namespace SuperTEEN
             this.MaximumSize = new System.Drawing.Size(608, 362);
             this.MinimumSize = new System.Drawing.Size(608, 362);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,7 +172,7 @@ namespace SuperTEEN
         private System.Windows.Forms.Label Password;
         private System.Windows.Forms.Label SuperTEEN;
         private System.Windows.Forms.TextBox tbUsername;
-        private System.Windows.Forms.TextBox textBox2;
+        //private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.TextBox tbPassword;

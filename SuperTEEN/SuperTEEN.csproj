@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\praktikum\</PublishUrl>
+    <PublishUrl>D:\.Kuliah\Semester 2\Praktikum PBO\Apps\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,6 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -73,6 +72,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -142,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModul.resx">
       <DependentUpon>FormModul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRunModul.id-ID.resx">
+      <DependentUpon>FormRunModul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRunModul.resx">
       <DependentUpon>FormRunModul.cs</DependentUpon>

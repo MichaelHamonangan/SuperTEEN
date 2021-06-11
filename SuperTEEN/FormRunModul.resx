@@ -117,4 +117,259 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblTask.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblTask.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 13.970149pt</value>
+  </data>
+  <data name="lblTask.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblTask.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblTask.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 80, 0, 0</value>
+  </data>
+  <data name="lblTask.Size" type="System.Drawing.Size, System.Drawing">
+    <value>855, 330</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblTask.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblTask.Text" xml:space="preserve">
+    <value>Task yang harus dikerjakan akan tertampil di sini</value>
+  </data>
+  <data name="lblTask.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblTask.Name" xml:space="preserve">
+    <value>lblTask</value>
+  </data>
+  <data name="&gt;&gt;lblTask.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTask.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTask.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnJalankan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnJalankan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Garamond, 10.2089548pt, style=Bold</value>
+  </data>
+  <data name="btnJalankan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 270</value>
+  </data>
+  <data name="btnJalankan.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 2, 4, 2</value>
+  </data>
+  <data name="btnJalankan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 32</value>
+  </data>
+  <data name="btnJalankan.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnJalankan.Text" xml:space="preserve">
+    <value>Jalankan</value>
+  </data>
+  <data name="&gt;&gt;btnJalankan.Name" xml:space="preserve">
+    <value>btnJalankan</value>
+  </data>
+  <data name="&gt;&gt;btnJalankan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnJalankan.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnJalankan.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblDurasi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.8208952pt</value>
+  </data>
+  <data name="lblDurasi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 186</value>
+  </data>
+  <data name="lblDurasi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDurasi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 28</value>
+  </data>
+  <data name="lblDurasi.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblDurasi.Text" xml:space="preserve">
+    <value>Total Durasi :</value>
+  </data>
+  <data name="&gt;&gt;lblDurasi.Name" xml:space="preserve">
+    <value>lblDurasi</value>
+  </data>
+  <data name="&gt;&gt;lblDurasi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDurasi.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblDurasi.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblDetik.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.8208952pt</value>
+  </data>
+  <data name="lblDetik.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 186</value>
+  </data>
+  <data name="lblDetik.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDetik.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 24</value>
+  </data>
+  <data name="lblDetik.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblDetik.Text" xml:space="preserve">
+    <value>Detik</value>
+  </data>
+  <data name="&gt;&gt;lblDetik.Name" xml:space="preserve">
+    <value>lblDetik</value>
+  </data>
+  <data name="&gt;&gt;lblDetik.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDetik.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblDetik.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblNamaModul.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="lblNamaModul.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16.1194019pt, style=Bold</value>
+  </data>
+  <data name="lblNamaModul.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="lblNamaModul.Size" type="System.Drawing.Size, System.Drawing">
+    <value>855, 36</value>
+  </data>
+  <data name="lblNamaModul.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblNamaModul.Text" xml:space="preserve">
+    <value>Nama Modul</value>
+  </data>
+  <data name="lblNamaModul.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;lblNamaModul.Name" xml:space="preserve">
+    <value>lblNamaModul</value>
+  </data>
+  <data name="&gt;&gt;lblNamaModul.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNamaModul.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblNamaModul.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.8208952pt</value>
+  </data>
+  <data name="lblTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 186</value>
+  </data>
+  <data name="lblTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 26</value>
+  </data>
+  <data name="lblTime.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblTime.Text" xml:space="preserve">
+    <value>xxx</value>
+  </data>
+  <data name="&gt;&gt;lblTime.Name" xml:space="preserve">
+    <value>lblTime</value>
+  </data>
+  <data name="&gt;&gt;lblTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblTime.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnBatalkan.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnBatalkan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Garamond, 10.2089548pt, style=Bold</value>
+  </data>
+  <data name="btnBatalkan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>535, 270</value>
+  </data>
+  <data name="btnBatalkan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 32</value>
+  </data>
+  <data name="btnBatalkan.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnBatalkan.Text" xml:space="preserve">
+    <value>Batalkan</value>
+  </data>
+  <data name="&gt;&gt;btnBatalkan.Name" xml:space="preserve">
+    <value>btnBatalkan</value>
+  </data>
+  <data name="&gt;&gt;btnBatalkan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnBatalkan.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnBatalkan.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>134, 134</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>855, 330</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.134328pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 2, 4, 2</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Jalankan Modul</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormRunModul</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

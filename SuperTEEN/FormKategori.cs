@@ -14,16 +14,19 @@ namespace SuperTEEN
         Exp Pengalaman;
         public enum Mode {Kesehatan,Belajar,Motivasi}
         Mode mode;
+        string tipe;
         public FormKategori(Exp pengalaman,string tipe)
         {
             InitializeComponent();
             Pengalaman = pengalaman;
-
+            this.tipe = tipe;
             if (tipe == "motivasi")
             {
                 mode = Mode.Motivasi;
                 lblKategori.Text = "Modul-Modul Motivasi";
-
+                lblDurasi.Text = "Jumlah kata :";
+                lblTime.Text = "100";
+                lblDetik.Text = "Kata";
                 using (var db = new DatabaseModul())
                 {
                     var query = from tbmotivasi in db.TbMotivasis select tbmotivasi;
@@ -37,7 +40,7 @@ namespace SuperTEEN
             {
                 mode = Mode.Belajar;
                 lblKategori.Text = "Modul-Modul Belajar";
-
+                lblDetik.Text = "menit";
                 using (var db = new DatabaseModul())
                 {
                     var query = from tbbelajar in db.TbBelajars select tbbelajar;
@@ -159,6 +162,38 @@ namespace SuperTEEN
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormKategori_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbNamaModul_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (tipe == "belajar")
+            {
+                using (var db = new DatabaseModul())
+                {
+                    var query = from tempBelajar in db.TbBelajars where tempBelajar.Nama_Modul == cbNamaModul.SelectedItem.ToString() select tempBelajar;
+                    foreach (var item in query)
+                    {
+                        lblTime.Text = item.Durasi.ToString();
+                    }
+                }
+            }
+            if (tipe == "kesehatan")
+            {
+                using (var db = new DatabaseModul())
+                {
+                    var query = from tempKesehatan in db.TbKesehatans where tempKesehatan.Nama_Modul == cbNamaModul.SelectedItem.ToString() select tempKesehatan;
+                    foreach (var item in query)
+                    {
+                        lblTime.Text = item.Durasi.ToString();
+                    }
+                }
+            }
+            Application.DoEvents();
         }
     }
 }

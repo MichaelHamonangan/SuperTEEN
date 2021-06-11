@@ -9,6 +9,7 @@ using System.Threading;
 using Timer = System.Windows.Forms.Timer;
 using System.Media;
 using System.Collections.Concurrent;
+using System.Speech.Synthesis;
 
 namespace SuperTEEN
 {
@@ -17,6 +18,7 @@ namespace SuperTEEN
         Exp exp;
         public Kesehatan kesehatan;
         public Belajar belajar;
+        bool Audio = true;
         public enum Mode { Kesehatan, Belajar }
         public enum Button { Jalankan, Selesai }
         Mode mode;
@@ -89,15 +91,26 @@ namespace SuperTEEN
             }
         }
 
+        int i = 1;
         BlockingCollection<int> _sleeper = new BlockingCollection<int>();
         private void TaskExecute(string task, int duration)
         {
             int dummy;
             if (mode == Mode.Kesehatan)
             {
-                SystemSounds.Beep.Play();
                 lblTask.Text = task;
-                while(duration>=0)
+                if (Audio == true)
+                {
+                    SystemSounds.Beep.Play();
+                    using (SpeechSynthesizer synth = new SpeechSynthesizer())
+                    {
+                        synth.SetOutputToDefaultAudioDevice();
+                        string audio = "Task" + i.ToString();
+                        i++;
+                        synth.Speak(audio);
+                    }
+                }
+                while (duration>=0)
                 {
                     lblTime.Text = duration.ToString();
                     Application.DoEvents();
@@ -107,8 +120,18 @@ namespace SuperTEEN
             }
             else if(mode == Mode.Belajar)
             {
-                SystemSounds.Beep.Play();
                 lblTask.Text = task;
+                if (Audio == true)
+                {
+                    SystemSounds.Beep.Play();
+                    using (SpeechSynthesizer synth = new SpeechSynthesizer())
+                    {
+                        synth.SetOutputToDefaultAudioDevice();
+                        string audio = "Task" + i.ToString();
+                        i++;
+                        synth.Speak(audio);
+                    }
+                }
                 int temp = duration * 60;
                 while (temp > 0)
                 {
@@ -125,7 +148,8 @@ namespace SuperTEEN
         {
             if (mode == Mode.Kesehatan)
             {
-                for (int i = 0; i < (kesehatan.Durasi+10); i++)
+                Audio = false;
+                for (int i = 0; i < (kesehatan.Durasi*2); i++)
                 {
                     _sleeper.Add(0);
                 }
@@ -133,7 +157,8 @@ namespace SuperTEEN
             }
             else if (mode == Mode.Belajar)
             {
-                for (int i = 0; i < (belajar.Durasi+10)*60; i++)
+                Audio = false;
+                for (int i = 0; i < (belajar.Durasi*2)*60; i++)
                 {
                     _sleeper.Add(0);
                 }

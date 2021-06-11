@@ -42,9 +42,9 @@ namespace SuperTEEN
             // 
             // lblTextIsiData
             // 
-            this.lblTextIsiData.BackColor = System.Drawing.Color.PeachPuff;
+            this.lblTextIsiData.BackColor = System.Drawing.Color.OldLace;
             this.lblTextIsiData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTextIsiData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTextIsiData.Font = new System.Drawing.Font("Microsoft YaHei", 10.20895F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTextIsiData.Location = new System.Drawing.Point(0, 0);
             this.lblTextIsiData.Name = "lblTextIsiData";
             this.lblTextIsiData.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
@@ -57,7 +57,7 @@ namespace SuperTEEN
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(72, 53);
+            this.lblUsername.Location = new System.Drawing.Point(73, 64);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(96, 20);
             this.lblUsername.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace SuperTEEN
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(75, 94);
+            this.lblPassword.Location = new System.Drawing.Point(76, 102);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(93, 20);
             this.lblPassword.TabIndex = 2;
@@ -75,35 +75,38 @@ namespace SuperTEEN
             // 
             // tbNewUsername
             // 
-            this.tbNewUsername.Location = new System.Drawing.Point(187, 53);
+            this.tbNewUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.20895F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNewUsername.Location = new System.Drawing.Point(190, 58);
             this.tbNewUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNewUsername.Name = "tbNewUsername";
-            this.tbNewUsername.Size = new System.Drawing.Size(216, 22);
+            this.tbNewUsername.Size = new System.Drawing.Size(245, 29);
             this.tbNewUsername.TabIndex = 3;
             // 
             // tbNewPassword
             // 
-            this.tbNewPassword.Location = new System.Drawing.Point(187, 94);
+            this.tbNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.20895F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNewPassword.Location = new System.Drawing.Point(190, 96);
             this.tbNewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNewPassword.Name = "tbNewPassword";
             this.tbNewPassword.PasswordChar = '*';
-            this.tbNewPassword.Size = new System.Drawing.Size(216, 22);
+            this.tbNewPassword.Size = new System.Drawing.Size(245, 29);
             this.tbNewPassword.TabIndex = 4;
             // 
             // tbConfirm
             // 
-            this.tbConfirm.Location = new System.Drawing.Point(187, 131);
+            this.tbConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.20895F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbConfirm.Location = new System.Drawing.Point(190, 133);
             this.tbConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbConfirm.Name = "tbConfirm";
             this.tbConfirm.PasswordChar = '*';
-            this.tbConfirm.Size = new System.Drawing.Size(216, 22);
+            this.tbConfirm.Size = new System.Drawing.Size(245, 29);
             this.tbConfirm.TabIndex = 5;
             // 
             // lblConfirm
             // 
             this.lblConfirm.AutoSize = true;
             this.lblConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirm.Location = new System.Drawing.Point(12, 133);
+            this.lblConfirm.Location = new System.Drawing.Point(12, 139);
             this.lblConfirm.Name = "lblConfirm";
             this.lblConfirm.Size = new System.Drawing.Size(157, 20);
             this.lblConfirm.TabIndex = 6;
@@ -116,7 +119,7 @@ namespace SuperTEEN
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCreate.Location = new System.Drawing.Point(76, 182);
+            this.btnCreate.Location = new System.Drawing.Point(76, 187);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(93, 30);
@@ -134,7 +137,7 @@ namespace SuperTEEN
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.134328F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBack.Location = new System.Drawing.Point(282, 182);
+            this.btnBack.Location = new System.Drawing.Point(282, 186);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(93, 30);
@@ -147,10 +150,10 @@ namespace SuperTEEN
             // 
             // FormSignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(448, 223);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(134F, 134F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ClientSize = new System.Drawing.Size(468, 229);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.lblConfirm);
@@ -161,9 +164,10 @@ namespace SuperTEEN
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblTextIsiData);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(468, 275);
-            this.MinimumSize = new System.Drawing.Size(468, 275);
+            this.MaximumSize = new System.Drawing.Size(488, 281);
+            this.MinimumSize = new System.Drawing.Size(488, 281);
             this.Name = "FormSignUp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up";
             this.ResumeLayout(false);
             this.PerformLayout();

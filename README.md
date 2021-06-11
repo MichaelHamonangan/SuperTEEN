@@ -8,4 +8,5 @@ Anggota :
 
 
 
-![Lapkel - Class Diagram](https://user-images.githubusercontent.com/72853893/117567174-128a8780-b0e5-11eb-86c5-64cb53101ef2.png)
+![Lapkel - Class Diagram](https://user-images.githubusercontent.com/72853893/121698519-48fa5e80-caf8-11eb-9400-96458611a1c8.png)
+

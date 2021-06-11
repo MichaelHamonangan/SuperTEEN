@@ -24,9 +24,9 @@ namespace SuperTEEN
             {
                 mode = Mode.Motivasi;
                 lblKategori.Text = "Modul-Modul Motivasi";
-                lblDurasi.Text = "Jumlah kata :";
+                lblDurasi.Text = "Jumlah huruf :";
                 lblTime.Text = "100";
-                lblDetik.Text = "Kata";
+                lblDetik.Text = "huruf";
                 using (var db = new DatabaseModul())
                 {
                     var query = from tbmotivasi in db.TbMotivasis select tbmotivasi;

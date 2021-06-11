@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -59,6 +59,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SuperTeen.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -191,6 +194,8 @@
     <Content Include="Resources\4mJtkR.jpg" />
     <Content Include="Resources\brush-strokes-background_53876-89327.jpg" />
     <Content Include="Resources\e77ec7693867e901290ce8d2b3e04f1c.jpg" />
+    <Content Include="Resources\SuperTeen.ico" />
+    <Content Include="SuperTeen.ico" />
     <None Include="Resources\Light-Flat-Shapes-Simple-Background-Orange.jpg" />
     <None Include="Resources\rm255-sasi-27.jpg" />
     <None Include="Resources\wp3687982.jpg" />

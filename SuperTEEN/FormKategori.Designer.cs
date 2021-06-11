@@ -29,6 +29,7 @@ namespace SuperTEEN
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKategori));
             this.lblKategori = new System.Windows.Forms.Label();
             this.cbNamaModul = new System.Windows.Forms.ComboBox();
             this.btnJalankan = new System.Windows.Forms.Button();
@@ -157,6 +158,7 @@ namespace SuperTEEN
             this.Controls.Add(this.btnJalankan);
             this.Controls.Add(this.cbNamaModul);
             this.Controls.Add(this.lblKategori);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(541, 309);
             this.MinimumSize = new System.Drawing.Size(541, 309);
